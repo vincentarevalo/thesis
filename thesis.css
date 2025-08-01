@@ -1,0 +1,464 @@
+    /* Global Styles */
+      :root {
+        --primary-color: #967bb6; /* Lavender */
+        --secondary-color: #b399d4;
+        --accent-color: #7e57c2;
+        --light-color: #e6e6fa;
+        --dark-color: #4b3a6b;
+        --text-color: #333;
+        --white: #ffffff;
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      h1,
+      h2,
+      h4 {
+        color: var(--dark-color);
+        margin-bottom: 1rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--accent-color);
+        transition: var(--transition);
+      }
+
+      a:hover {
+        color: var(--dark-color);
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Header Styles */
+      .college-header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--dark-color)
+        );
+        color: var(--white);
+        padding: 1.5rem 0;
+        box-shadow: var(--shadow);
+      }
+
+      .college-header .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .college-name {
+        margin: 1rem 0;
+      }
+
+      .college-name h2 {
+        color: var(--white);
+        font-size: 1.5rem;
+      }
+
+      .college-name p {
+        color: var(--light-color);
+        font-size: 1rem;
+      }
+
+      .logo {
+        height: 80px;
+        width: auto;
+        margin: 0 10px;
+      }
+
+      header {
+        background-color: var(--white);
+        padding: 2rem 0;
+        text-align: center;
+        margin-bottom: 2rem;
+        box-shadow: var(--shadow);
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+        color: var(--dark-color);
+      }
+
+      .subtitle {
+        color: var(--primary-color);
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      /* Papers Container */
+      .papers-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .paper-card {
+        background-color: var(--white);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .paper-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .paper-header {
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 1rem;
+      }
+
+      .paper-title {
+        font-size: 1.1rem;
+        margin: 0;
+      }
+
+      .paper-body {
+        padding: 1.5rem;
+        flex-grow: 1;
+      }
+
+      .paper-meta {
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+
+      .paper-abstract {
+        font-size: 0.95rem;
+        color: var(--text-color);
+        margin-bottom: 1.5rem;
+      }
+
+      .paper-footer {
+        padding: 0 1.5rem 1.5rem;
+        text-align: center;
+      }
+
+      .qr-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .qr-code {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #eee;
+        padding: 5px;
+        background: white;
+      }
+
+      .qr-label {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+
+      /* Footer Styles */
+      .main-footer {
+        background: linear-gradient(
+          135deg,
+          var(--dark-color),
+          var(--primary-color)
+        );
+        color: var(--white);
+        padding: 3rem 0 1rem;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-column h3 {
+        color: var(--white);
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+
+      .footer-column h3::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background-color: var(--light-color);
+      }
+
+      .footer-column ul {
+        list-style: none;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 0.8rem;
+      }
+
+      .footer-column ul li a {
+        color: var(--light-color);
+        transition: var(--transition);
+      }
+
+      .footer-column ul li a:hover {
+        color: var(--white);
+        padding-left: 5px;
+      }
+
+      .footer-column ul li i {
+        margin-right: 10px;
+        width: 20px;
+        text-align: center;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 1rem;
+      }
+
+      .social-links a {
+        color: var(--white);
+        font-size: 1.2rem;
+        transition: var(--transition);
+      }
+
+      .social-links a:hover {
+        transform: translateY(-3px);
+        color: var(--light-color);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+        color: var(--light-color);
+      }
+
+      /* Back to Top Button */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: var(--primary-color);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        z-index: 999;
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        background-color: var(--dark-color);
+        transform: translateY(-3px);
+      }
+
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        overflow-y: auto;
+      }
+
+      .modal-content {
+        background-color: var(--white);
+        margin: 5% auto;
+        padding: 2rem;
+        width: 90%;
+        max-width: 800px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        position: relative;
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .close-modal:hover {
+        color: var(--dark-color);
+      }
+
+      .modal-header {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #eee;
+      }
+
+      .modal-body {
+        margin-bottom: 1.5rem;
+      }
+
+      /* Responsive Styles */
+      @media (min-width: 768px) {
+        .college-header .container {
+          flex-direction: row;
+          justify-content: space-between;
+          text-align: left;
+        }
+
+        .college-name {
+          margin: 0;
+          flex-grow: 1;
+          text-align: center;
+        }
+
+        header h1 {
+          font-size: 2.5rem;
+        }
+
+        .subtitle {
+          font-size: 1.2rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .college-header img {
+          display: none;
+        }
+        .papers-container {
+          grid-template-columns: 1fr;
+        }
+
+        .paper-title {
+          font-size: 1rem;
+        }
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .paper-card {
+        animation: fadeIn 0.5s ease forwards;
+      }
+
+      .paper-card:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .paper-card:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .paper-card:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .paper-card:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .paper-card:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+      .paper-card:nth-child(6) {
+        animation-delay: 0.6s;
+      }
+
+      .member-dropdown {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        margin-left: 16px;
+        padding-left: 10px;
+        border-left: 3px solid #007bff;
+        background-color: #f8f9fa;
+        font-size: 0.95rem;
+      }
+
+      .member-dropdown.show {
+        max-height: 600px;
+        opacity: 1;
+        margin-top: 8px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .paper-authors {
+        color: #007bff;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      .member-dropdown ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      li {
+        font-size: 15px;
+      }
